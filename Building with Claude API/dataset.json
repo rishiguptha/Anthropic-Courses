@@ -1,11 +1,17 @@
 [
   {
-    "task": "Write a Python function that parses an AWS S3 bucket URI (e.g., 's3://my-bucket/path/to/file.txt') and returns a dictionary with keys 'bucket' and 'key'."
+    "task": "Create a CloudWatch alarm configuration that monitors EC2 CPU utilization above 80% for 2 consecutive periods of 5 minutes each",
+    "format": "json",
+    "solution_criteria": "JSON must include MetricName as CPUUtilization, Namespace as AWS/EC2, ComparisonOperator as GreaterThanThreshold, Threshold as 80, EvaluationPeriods as 2, and Period as 300"
   },
   {
-    "task": "Create a JSON object representing an AWS IAM policy that allows read-only access to all objects in a specific S3 bucket named 'data-bucket'."
+    "task": "Write a Python function that takes an S3 bucket ARN and extracts just the bucket name from it",
+    "format": "python",
+    "solution_criteria": "Function must handle standard S3 ARN format 'arn:aws:s3:::bucket-name', return only the bucket name string, and handle cases where input might not be a valid S3 ARN"
   },
   {
-    "task": "Write a regex pattern that matches valid AWS EC2 instance IDs (format: 'i-' followed by 17 hexadecimal characters)."
+    "task": "Create a regular expression that matches valid AWS region identifiers (e.g., us-east-1, eu-west-2, ap-southeast-1)",
+    "format": "regex",
+    "solution_criteria": "Regex must match the pattern of 2-3 lowercase letters, hyphen, 4-9 lowercase letters, hyphen, and single digit. Should match examples like us-east-1, eu-central-1, ap-southeast-2 but reject invalid formats"
   }
 ]
